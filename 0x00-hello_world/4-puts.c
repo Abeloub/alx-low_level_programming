@@ -1,6 +1,8 @@
 #include <stdio.h>
 /**
- * Main
+ * Main - entre point
+ * Description : print with puts comand
+ * Return: 0
  */
 int main(void)
 {
