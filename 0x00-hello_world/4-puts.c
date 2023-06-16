@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * Main - entre point
+ * main - entre point
  * Description : print with puts comand
  * Return: 0
 */
