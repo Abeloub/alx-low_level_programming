@@ -3,10 +3,11 @@
 #include <stdio.h>
 
 /**
- *  *main : random number to the variable n 
- *   *getting the last digit of the number stored in the variable n
- *    *Return: Always 0
- *     */
+ * main : random number to the variable n 
+ * getting the last digit of the number stored in the variable n
+ * Return: Always 0
+ *
+*/
 int main(void)
 {
 		int n;
@@ -14,7 +15,6 @@ int main(void)
 
 		srand(time(0));
 		n = rand() - RAND_MAX / 2;
-
 		x = n % 10;
 		printf("Last digit of %d is %d ", n, x);
 			if (x > 5)
