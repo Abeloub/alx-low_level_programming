@@ -2,6 +2,7 @@
 
 /**
  * main - Print alphabet in lowercases
+ * Description : print all lower case letters
  * Return: 0
  */
 
