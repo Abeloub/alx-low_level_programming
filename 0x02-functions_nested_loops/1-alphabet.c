@@ -3,6 +3,7 @@
 /**
  * main - Print alphabet in lowercases
  * Description : print all lower case letters
+ * using only _putchar function
  * Return: 0
  */
 
