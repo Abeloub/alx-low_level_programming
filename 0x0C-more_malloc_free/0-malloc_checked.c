@@ -1,36 +1,17 @@
 #include "main.h"
 
 /**
- * string_nconcat - concatenates two strings
- * @s1: first string
- * @s2: second string
- * @n:  max number of strings to concatinate
- * Return: pointer to the concatenated string if no errors
- * elsewhere return NULL
+ *   malloc_checked - allocates memory using malloc
+ *   @b: number of bytes to be allocated
+ * Return: a pointer to the allocated memory
  */
-char *string_nconcat(char *s1, char *s2, unsigned int n)
+
+void *malloc_checked(unsigned int b)
 {
-	unsigned int x = 0, y = 0, z;
-	char *s;
+		void *i = malloc(b);
 
-	if (s1)
-	{
-		while (s1[x] != '\0')
-			x++;
-	}
-	if (s2)
-	{
-		while (s2[y] != '\0' && y < n)
-			y++;
-	}
+			if (!i)
+						exit(98);
+				return (i);
 
-	s = malloc(sizeof(char) * (x + y + 1));
-	if (!s)
-		return (NULL);
-	for (z = 0; z < x; z++)
-		s[z] = s1[z];
-	for (z = 0; z < y; z++)
-		s[z + x] = s2[z];
-	s[x + y] = '\0';
-	return (s);
 }
