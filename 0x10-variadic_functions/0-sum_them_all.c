@@ -15,8 +15,10 @@ int sum_them_all(const unsigned int n, ...)
 	va_start(p, n);
 
 	while (i < n)
-		sum += va_arg(p, int);
+	{
+		sum += (int) va_arg(p, int);
 		i++;
+	}
 
 	va_end(p);
 
