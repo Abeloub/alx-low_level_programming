@@ -1,10 +1,8 @@
 #include "variadic_functions.h"
 
 /**
- * print_all - prints anything
- *
+ * print_all - prints all
  * @format: list of types of arguments
- *
  * Return: void
  */
 
