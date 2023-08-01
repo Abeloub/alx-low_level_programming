@@ -1,41 +1,34 @@
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 #include "lists.h"
+#include <stdlib.h>
 
 /**
- * main - check the code
- * Return: Always 0.
+ * delete_nodeint_at_index - deletes the node at index of a list
+ * @head: head of list
+ * @index: index of node
+ * Return: 1 if succeeded, -1 if failed
  */
-int main(void)
-{
-listint_t *head;
-int i;
 
-head = NULL;
-add_nodeint_end(&head, 0);
-add_nodeint_end(&head, 1);
-add_nodeint_end(&head, 2);
-add_nodeint_end(&head, 3);
-add_nodeint_end(&head, 4);
-add_nodeint_end(&head, 98);
-add_nodeint_end(&head, 402);
-add_nodeint_end(&head, 1024);
-print_listint(head);
-printf("-----------------\n");
-delete_nodeint_at_index(&head, 5);
-print_listint(head);
-for (i = 0; i < 6 ; i++)
+int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-printf("-----------------\n");
-delete_nodeint_at_index(&head, 0);
-print_listint(head);
-}
-for (i = 0; i < 10 ; i++)
-{
-printf("-----------------\n");
-delete_nodeint_at_index(&head, 0);
-}
-print_listint(head);
-return (0);
+	listint_t *tmp = *head, *tmp_second;
+	unsigned int i;
+
+	if (!head || !*head)
+		return (-1);
+	if (!index)
+	{
+		*head = tmp->next;
+		free(tmp);
+		return (1);
+	}
+	for (i = 0; i < index - 1; i++)
+	{
+		if (!tmp)
+			return (-1);
+		tmp = tmp->next;
+	}
+	tmp_second = tmp->next;
+	tmp->next = tmp_second->next;
+	free(tmp_second);
+	return (1);
 }
