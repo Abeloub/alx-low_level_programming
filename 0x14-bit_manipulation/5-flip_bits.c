@@ -10,19 +10,19 @@
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned long int m = 1;
+	unsigned long int p = 1;
 	unsigned int count = 0;
 
-	m <<= 63;
-	while (!(m & n) && !(m & m) && m)
-		m >>= 1;
-	if (!m)
+	p <<= 63;
+	while (!(p & n) && !(p & m) && p)
+		p >>= 1;
+	if (!p)
 		return (0);
-	while (m)
+	while (p)
 	{
-		if ((m & n) != (m & m))
+		if ((p & n) != (p & m))
 			count++;
-		m >>= 1;
+		p >>= 1;
 	}
 	return (count);
 }
