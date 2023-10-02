@@ -2,8 +2,8 @@
 
 /**
  * append_text_to_file - appends text at the end of a file
- * @filename name of the file to append
- * @text_content string to add at the end
+ * @filename: name of the file to append
+ * @text_content: string to add at the end
  * Return: 1 on success, -1 on failure
  * Failures:
  * - file can not be opened or written
