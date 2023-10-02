@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * create_file creates a file
- * @filename name of the file
- * @text_content NULL terminated string to write in the file
+ * create_file - creates a file
+ * @filename - name of the file
+ * @text_content -string to write in the file
  * Return: 1 on success, -1 on failure
  * Failures:
  * - file can not be created
